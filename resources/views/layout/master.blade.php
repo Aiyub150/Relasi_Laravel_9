@@ -222,10 +222,12 @@
                   <p>Supplier</p>
                 </a>
               </li>
-              <a href="/transaksi" class="nav-link">
-                <i class="nav-icon fas fa-chart-pie"></i>
-                <p>Transaksi</p>
-            </a>
+              <li class="nav-item">
+                <a href="/transaksi" class="nav-link">
+                  <i class="fas fa-chart-pie nav-icon"></i>
+                  <p>Transaksi</p>
+                </a>
+              </li>
             </ul>
         </li>
 

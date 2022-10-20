@@ -59,3 +59,10 @@ Route::post('/transaksi/simpan',[TransaksiController::class,'simpan']);
 Route::get('/transaksi/ubah{id}',[TransaksiController::class,'ubah']);
 Route::post('/transaksi/update',[TransaksiController::class,'update']);
 Route::get('/transaksi/delete{id}',[TransaksiController::class,'delete']);
+
+Route::get('/transaksi_detail', [TransaksiDetailController::class,'index']);
+Route::get('/transaksi_detail/tambah', [TransaksiDetailController::class,'tambah']);
+Route::post('/transaksi_detail/simpan',[TransaksiDetailController::class,'simpan']);
+Route::get('/transaksi_detail/ubah{id}',[TransaksiDetailController::class,'ubah']);
+Route::post('/transaksi_detail/update',[TransaksiDetailController::class,'update']);
+Route::get('/transaksi_detail/delete{id}',[TransaksiDetailController::class,'delete']);
