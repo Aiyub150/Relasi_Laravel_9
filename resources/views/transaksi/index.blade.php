@@ -30,7 +30,7 @@
           <td>{{ $a->transaksi_nonota }}</td>
           <td>{{ $a->transaksi_status }}</td>
           <td><a href="/transaksi/ubah{{ $a->id }}" class="btn btn-warning">EDIT</a></td>
-          <td><a href="/transaksi/delete{{ $a->id }}" class="btn btn-danger">DELETE</a></td>
+          <td><a href="/transaksi/delete{{ $a->id_transaksi }}" class="btn btn-danger">DELETE</a></td>
         </tr>
         @endforeach
       </table>

@@ -47,9 +47,9 @@ class TransaksiController extends Controller
         ]);
         return redirect('/transaksi');
     }
-    public function delete($id)
+    public function delete(Request $request)
     {
-        DB::table('tbl_transaksi')->where('id',$id)->delete();
+        DB::table('tbl_transaksi')->where('id_transaksi',$request->id_transaksi)->delete();
         return redirect('/transaksi');
     }
 }

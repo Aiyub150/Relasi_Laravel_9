@@ -37,7 +37,7 @@ Route::get('/barang/tambah', [BarangController::class,'tambah']);
 Route::post('/barang/simpan',[BarangController::class,'simpan']);
 Route::get('/barang/ubah{id}',[BarangController::class,'ubah']);
 Route::post('/barang/update',[BarangController::class,'update']);
-Route::get('/barang/delete{id}',[BarangController::class,'delete']);
+Route::get('/barang/delete{id_barang}',[BarangController::class,'delete']);
 
 Route::get('/jenis', [JenisController::class,'index']);
 Route::get('/jenis/tambah', [JenisController::class,'tambah']);
@@ -58,7 +58,7 @@ Route::get('/transaksi/tambah', [TransaksiController::class,'tambah']);
 Route::post('/transaksi/simpan',[TransaksiController::class,'simpan']);
 Route::get('/transaksi/ubah{id}',[TransaksiController::class,'ubah']);
 Route::post('/transaksi/update',[TransaksiController::class,'update']);
-Route::get('/transaksi/delete{id}',[TransaksiController::class,'delete']);
+Route::get('/transaksi/delete{id_transaksi}',[TransaksiController::class,'delete']);
 
 Route::get('/transaksi_detail', [TransaksiDetailController::class,'index']);
 Route::get('/transaksi_detail/tambah', [TransaksiDetailController::class,'tambah']);

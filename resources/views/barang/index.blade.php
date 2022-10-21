@@ -34,7 +34,7 @@
           <td>{{ $a->harga_jual }}</td>
           <td>{{ $a->barang_status }}</td>
           <td><a href="/barang/ubah{{ $a->id }}" class="btn btn-warning">EDIT</a></td>
-          <td><a href="/barang/delete{{ $a->id }}" class="btn btn-danger">DELETE</a></td>
+          <td><a href="/barang/delete{{ $a->id_barang }}" class="btn btn-danger">DELETE</a></td>
         </tr>
         @endforeach
       </table>

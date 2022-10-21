@@ -52,9 +52,9 @@ class BarangController extends Controller
         ]);
         return redirect('/barang');
     }
-    public function delete($id)
+    public function delete(Request $request)
     {
-        DB::table('tbl_barang')->where('id',$id)->delete();
+        DB::table('tbl_barang')->where('id_barang',$request->id_barang)->delete();
         return redirect('/barang');
     }
 }
