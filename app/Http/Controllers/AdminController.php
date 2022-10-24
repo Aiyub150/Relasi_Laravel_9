@@ -31,20 +31,13 @@ class AdminController extends Controller
     }
     public function ubah($id)
     {
-        $admin = DB::table('tbl_admin')->where('id',$id)->get();
-        return view('admin.ubah',['admin'=>$admin]);
+        $admin = Admin::find($id);
+        return view('admin.ubah',compact(['admin']));
     }
-    public function update(Request $request)
+    public function update($id, Request $request)
     {
-        DB::table('tbl_admin')->where('id_admin',$request->id_admin)->update([
-            'id_admin'=>$request->id_admin,
-            'username'=>$request->username,
-            'password'=>$request->password,
-            'admin_level'=>$request->admin_level,
-            'admin_nama'=>$request->admin_nama,
-            'admin_status'=>$request->admin_status
-        ]);
-
+        $admin = Admin::find($id);
+        $admin->update($request->except(['_token','submit']));
         return redirect('/admin');
     }
     public function delete($id)
